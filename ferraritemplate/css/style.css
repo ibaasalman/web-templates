@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "ferrari";
+  src: url("../fonts/FerroRosso.ttf") format("truetype"),
+    url("../fonts/FerroRosso.woff") format("woff");
+}
+
+:root {
+  --green: #2fa158;
+  --yellow: #fff22e;
+  --red: #cc232a;
+  --white: #f9fcfa;
+  --black: #011b27;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "ferrari", sans-serif;
+  transition: all ease-in-out 0.2s;
+}
+
+.cont{
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow:  row wrap;
+}
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+.red {
+  color: var(--red);
+}
+header {
+  width: 100%;
+  background-color: red;
+}
+header p {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5.8vh;
+  color: var(--white);
+  text-shadow: 0px 3px 7px var(--black);
+}
+header .bg {
+  filter: brightness(60%);
+  width: 100%;
+  height: 600px;
+  background: url(../imgs/bg.jpg) no-repeat center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header nav {
+  background-color: var(--black);
+  width: 100%;
+}
+header nav::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--green) 33%,
+    var(--white) 33% 66%,
+    var(--red) 66% 100%
+  );
+}
+header .logo {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 90px;
+  margin: 5px 15px;
+  padding: 10px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+}
+header ul li {
+  list-style-type: none;
+  margin: 8px 10px;
+  font-size: 3.5vh;
+  position: relative;
+}
+header ul li a:hover {
+  color: var(--red);
+}
+
+header ul li:hover ::before {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom: 10px solid var(--white);
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 19px);
+}
+
+.about,
+.enzo {
+  background: var(--black);
+  color: #fff;
+  padding: 15px;
+  font-size: 3.5vh;
+
+}
+.enzo {
+  background: var(--green);
+  overflow: hidden;
+}
+.about .cont div:first-child {
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .cont div,
+.enzo .cont div {
+  width: 300px;
+  margin: 10px;
+}
+.normal {
+  margin: 10px 0px;
+  font-size: 2vh;
+  font-family: sans-serif;
+  text-align: justify;
+}
+.imgbox {
+  text-align: center;
+  background-color: var(--green);
+}
+.imgbox p {
+  margin: 10px 0px;
+}
+.imgbox img {
+  width: 100%;
+  padding: 15px 10px;
+  background-color: #333;
+  margin-bottom: -6px;
+}
+.titlesec{
+    padding: 20px 15px 0px 15px;
+    text-align: center;
+    font-size: 5vh;
+    background: var(--red);
+}
+.imgsarea {
+    padding: 20px 0px;
+    background-color: var(--black);
+
+}
+.imgsarea .cont div{
+    width: 313.5px;
+    height: 200px;
+    font-size: 35px;
+    text-align: center;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(1);
+
+}
+.imgsarea span{
+    padding: 10px;
+}
+.imgsarea .cont div:hover{
+    filter: grayscale(0);
+}
+.mapouter{
+    min-width: 100%;
+    background: var(--red);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 30px;
+}
+footer p {
+    margin: 20px;
+}
+footer i {
+    text-align: center;
+    background: var(--red);
+    padding: 6px 0px;
+    margin: 1px;
+    border-radius: 24%;
+    font-size: 24px;
+    color: var(--white);
+    width: 40px;
+}
+footer i:hover{
+    filter: brightness(0.5);
+}
+footer::before{
+ 
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    margin: auto;
+    max-width: 940px;
+    background: linear-gradient(
+      90deg,
+      var(--green) 33%,
+      var(--white) 33% 66%,
+      var(--red) 66% 100%
+    );
+}
+@media only screen and (max-width: 860px) {
+  header .logo {
+    position: static;
+    margin-left: 50%;
+    transform: translate(-50%, 10px);
+  }
+  header .bg {
+    height: 450px;
+  }
+  header p {
+    top: 50%;
+  }
+  .about div,
+  .enzo div {
+    margin: 10px;
+    width: 100%;
+  }
+  .imgsarea .cont div{
+    width: 46%;
+    height: 160px;
+  }
+  iframe{
+    height: 300px !important;
+  }
+}
